@@ -11,7 +11,7 @@ use crate::pipe::{CloseHandle, CreateNamedPipeW, GetLastError, MaxInstances, Pip
 use crate::wintypes::{DWORD, HANDLE, INVALID_HANDLE_VALUE, LPCVOID, LPVOID};
 
 pub(crate) mod wintypes;
-pub(crate) mod pipe;
+pub mod pipe;
 
 fn to_wide_null(s: &str) -> Vec<u16> {
     std::ffi::OsStr::new(s)
